@@ -44,6 +44,7 @@ class Board:
         newNum += self.at(x2,y2)*(Board.pow6[x1*6+y1])
         return Board(num=newNum)
 
+"""
 import time
 start = time.time()
 x = 6
@@ -53,4 +54,5 @@ for i in xrange(100000):
     z = y.swap((0,0),(3,3))
             
 print time.time()-start
+"""
 
