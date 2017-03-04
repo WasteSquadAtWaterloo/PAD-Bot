@@ -7,33 +7,28 @@ DIST = 100
 
 
 def set_cursor(x,y):
-    moveTo(MIN_X + DIST*x, MIN_Y+ DIST*y)
+    moveTo(MIN_X + DIST*y, MIN_Y+ DIST*x)
 
 def move_up(amt):
-    moveRel(0, -amt*100, 0.12*amt)
+    moveRel(0, -amt*100, 0.01*amt)
 def move_down(amt):
-    moveRel(0, amt*100, 0.12*amt)
+    moveRel(0, amt*100, 0.01*amt)
 def move_left(amt):
-    moveRel(-amt*100, 0, 0.12*amt)
+    moveRel(-amt*100, 0, 0.01*amt)
 def move_right(amt):
-    moveRel(amt*100, 0, 0.12*amt)
+    moveRel(amt*100, 0, 0.01*amt)
 
 def do_sequence(start_x, start_y, seq):
     set_cursor(start_x, start_y)
     mouseDown()
     for mv in seq:
-        if mv[0] == 'U':
-            move_up(mv[1])
-        elif mv[0] == 'D':
-            move_down(mv[1])
-        elif mv[0] == 'L':
-            move_left(mv[1])
-        elif mv[0] == 'R':
-            move_right(mv[1])
+        if mv == 'U':
+            move_up(1)
+        elif mv == 'D':
+            move_down(1)
+        elif mv == 'L':
+            move_left(1)
+        elif mv == 'R':
+            move_right(1)
     mouseUp()
             
-
-sleep(3)
-set_cursor(4,0)
-do_sequence([['R',1],['D',4],['L',1],['U',1],['R',1]])
-

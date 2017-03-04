@@ -1,0 +1,19 @@
+{
+  "name": "pad-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WasteSquadAtWaterloo/PAD-Bot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WasteSquadAtWaterloo/PAD-Bot/issues"
+  },
+  "homepage": "https://github.com/WasteSquadAtWaterloo/PAD-Bot#readme"
+}

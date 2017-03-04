@@ -41,30 +41,31 @@ def load_board():
     board = [[-1 for i in xrange(6)] for j in xrange(5)]
     
     for point in zip(*fire_loc[::-1]):
-        print (point[0] - 520)/100,(point[1] -480)/100
+        #print (point[0] - 520)/100,(point[1] -480)/100
         board[(point[1] -480)/100][(point[0] - 520)/100] = 0
-    print 
+    #print 
     for point in zip(*water_loc[::-1]):
-        print (point[0] - 520)/100,(point[1] -480)/100
+        #print (point[0] - 520)/100,(point[1] -480)/100
         board[(point[1] -480)/100][(point[0] - 520)/100] = 1
-    print
+    #print
     for point in zip(*wood_loc[::-1]):
-        print (point[0] - 520)/100,(point[1] -480)/100
+        #print (point[0] - 520)/100,(point[1] -480)/100
         board[(point[1] -480)/100][(point[0] - 520)/100] = 2
-    print
+    #print
     for point in zip(*light_loc[::-1]):
-        print (point[0] - 520)/100,(point[1] -480)/100
+        #print (point[0] - 520)/100,(point[1] -480)/100
         board[(point[1] -480)/100][(point[0] - 520)/100] = 3
-    print
+    #print
     for point in zip(*heart_loc[::-1]):
-        print (point[0] - 520)/100,(point[1] -480)/100
+        #print (point[0] - 520)/100,(point[1] -480)/100
         board[(point[1] -480)/100][(point[0] - 520)/100] = 4
-    print
+    #print
     for point in zip(*dark_loc[::-1]):
-        print (point[0] - 520)/100,(point[1] -480)/100
+        #print (point[0] - 520)/100,(point[1] -480)/100
         board[(point[1] -480)/100][(point[0] - 520)/100] = 5
-    print
+    #print
     return board
+
 sleep(3)
 for i in load_board():
     print i
